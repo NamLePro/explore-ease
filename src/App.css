@@ -1,0 +1,53 @@
+:root { 
+  --primary: #4facfe; --secondary: #00f2fe; --dark: #1a1a1a; 
+  --light: #f0f2f5; --accent: #ff4757; 
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', sans-serif; background: var(--light); color: var(--dark); }
+
+.header { display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+.hero { padding: 60px 20px; text-align: center; color: white; background: linear-gradient(135deg, var(--primary), var(--secondary)); }
+.user-info { display: flex; align-items: center; gap: 12px; background: #f0f9ff; padding: 6px 15px; border-radius: 50px; border: 1px solid var(--primary); }
+.btn-logout { background: var(--accent); color: white; border: none; padding: 5px 12px; border-radius: 15px; cursor: pointer; font-size: 12px; font-weight: bold; }
+
+.category-section { display: flex; justify-content: center; gap: 15px; padding: 25px; flex-wrap: wrap; }
+.cat-card { background: white; padding: 15px; border-radius: 15px; width: 105px; text-align: center; cursor: pointer; transition: 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+.cat-card:hover, .cat-card.active { background: var(--primary); color: white; transform: translateY(-3px); }
+.btn-reset { border: 1px solid #ddd; background: white; padding: 10px 20px; border-radius: 20px; cursor: pointer; }
+
+.search-bar { max-width: 600px; margin: 0 auto 30px; padding: 0 20px; }
+.search-bar input { width: 100%; padding: 12px 25px; border-radius: 30px; border: 1px solid #ddd; outline: none; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; padding: 0 5% 20px; }
+.card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: 0.3s; }
+.card:hover { transform: translateY(-8px); }
+.card-img img { width: 100%; height: 180px; object-fit: cover; }
+.badge { position: absolute; top: 12px; left: 12px; background: white; padding: 4px 10px; border-radius: 15px; font-size: 11px; font-weight: bold; color: var(--primary); }
+.card-body { padding: 18px; }
+.card-actions { display: flex; justify-content: space-between; margin-bottom: 15px; align-items: center; }
+
+.load-more-container { display: flex; justify-content: center; padding-bottom: 50px; }
+.btn-load-more { background: white; color: var(--primary); border: 2px solid var(--primary); padding: 10px 25px; border-radius: 25px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+.btn-load-more:hover { background: var(--primary); color: white; }
+
+.modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); display: flex; justify-content: center; align-items: center; z-index: 1000; backdrop-filter: blur(8px); }
+.auth-modal { background: #1a1a1a; padding: 40px; border-radius: 25px; width: 90%; max-width: 400px; color: white; border: 1px solid rgba(255,255,255,0.1); }
+.auth-tabs { display: flex; gap: 10px; margin-bottom: 20px; }
+.auth-tabs button { flex: 1; padding: 10px; border: none; background: #2d2d2d; color: #888; border-radius: 10px; cursor: pointer; }
+.auth-tabs button.active { background: var(--primary); color: white; }
+.form-group { margin-bottom: 15px; display: flex; flex-direction: column; text-align: left; }
+.form-group input, .form-group select { padding: 12px; border-radius: 10px; border: none; background: #2d2d2d; color: white; margin-top: 5px; }
+
+.detail-modal { background: white; width: 95%; max-width: 700px; border-radius: 25px; overflow-y: auto; max-height: 90vh; position: relative; }
+.modal-img { width: 100%; height: 300px; object-fit: cover; }
+.detail-body { padding: 25px; }
+.btn-direction { background: #4285F4; color: white; border: none; padding: 10px 20px; border-radius: 12px; font-weight: bold; margin-top: 15px; cursor: pointer; }
+
+.review-item { background: #f8f9fa; padding: 15px; border-radius: 15px; margin-bottom: 15px; }
+.review-reactions span { background: #eee; padding: 3px 10px; border-radius: 15px; font-size: 12px; margin-right: 10px; cursor: pointer; }
+.add-review { background: #f1f3f5; padding: 15px; border-radius: 15px; margin-top: 20px; }
+.add-review textarea { width: 100%; height: 80px; padding: 10px; border-radius: 10px; border: 1px solid #ddd; margin: 10px 0; resize: none; }
+
+.btn-submit { width: 100%; padding: 12px; background: var(--primary); color: white; border: none; border-radius: 10px; font-weight: bold; cursor: pointer; }
+.close-btn { position: absolute; top: 15px; right: 15px; width: 35px; height: 35px; border-radius: 50%; border: none; background: white; cursor: pointer; font-size: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+.footer { text-align: center; padding: 30px; color: #999; }
